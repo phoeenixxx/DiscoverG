@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { Link, Route, Routes, useNavigate, useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -8,11 +8,9 @@ import {
   ArrowUpRight,
   Bookmark,
   Check,
-  ChevronRight,
   Compass,
   Heart,
   Info,
-  Instagram,
   MapPin,
   Menu,
   Mountain,
@@ -29,7 +27,8 @@ import {
   useMap
 } from "react-leaflet";
 import L from "leaflet";
-import { categories, destinations, Destination } from "./data";
+import { categories, destinations } from "./data";
+import type { Destination } from "./data";
 
 const markerCategories: Record<string, { symbol: string; color: string }> = {
   "მთები": { symbol: "▲", color: "#527c69" },
